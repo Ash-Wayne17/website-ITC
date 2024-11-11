@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+<style>
+   
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        color: #333;
+        background: linear-gradient(45deg, #f0f9ff, #e0f2ff, #e0f7fa);
+        background-size: 400% 400%;
+        animation: gradientAnimation 10s ease infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+   
+    .particle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        animation: floatAnimation 10s linear infinite;
+    }
+
+   
+    @keyframes floatAnimation {
+        0% { transform: translateY(0) scale(1); opacity: 0.7; }
+        50% { transform: translateY(-20px) scale(1.2); opacity: 0.9; }
+        100% { transform: translateY(0) scale(1); opacity: 0.7; }
+    }
+
+    
+    .container {
+        max-width: 800px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        z-index: 1;
+        text-align: center;
+        position: relative;
+    }
+
+    .container:hover {
+        transform: scale(1.02);
+    }
+
+
+    .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        font-size: 1em;
+        color: #007acc;
+        background-color: #ffffff;
+        border: 1px solid #007acc;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+        background-color: #007acc;
+        color: #ffffff;
+    }
+
+   
+    .header {
+        padding: 40px;
+        background-image: url('ash.jpg'); 
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-align: center;
+        border-radius: 8px 8px 0 0;
+        margin-bottom: 20px;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .header p {
+        font-size: 1.2em;
+        text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    
+    .about-content {
+        padding: 20px;
+        text-align: left;
+    }
+
+    .about-content h2 {
+        font-size: 1.8em;
+        color: #007acc;
+        margin-bottom: 10px;
+    }
+
+    .about-content p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 20px;
+        transition: color 0.3s ease;
+    }
+
+    .about-content p:hover {
+        color: #007acc;
+    }
+
+    .highlight {
+        color: #007acc;
+        font-weight: bold;
+    }
+
+    .icon {
+        display: inline-block;
+        font-size: 1.5em;
+        color: #007acc;
+        margin-right: 8px;
+    }
+
+   
+    @media (max-width: 768px) {
+        .header h1 {
+            font-size: 2em;
+        }
+        .about-content p {
+            font-size: 1em;
+        }
+    }
+</style>
+</head>
+<body>
+  
+    <div class="particle" style="top: 10%; left: 15%; animation-duration: 15s;"></div>
+    <div class="particle" style="top: 20%; right: 20%; animation-duration: 20s;"></div>
+    <div class="particle" style="bottom: 10%; left: 30%; animation-duration: 25s;"></div>
+    <div class="particle" style="bottom: 20%; right: 10%; animation-duration: 18s;"></div>
+
+    <div class="container">
+        
+        <a href="Body web.html" class="back-button">Back to Main Website</a>
+
+        
+        <div class="header">
+            <h1>About Me</h1>
+            <p>Get to know a little bit more about who I am</p>
+        </div>
+
+       
+        <div class="about-content">
+            <h2><span class="icon">👤</span> Introduction</h2>
+            <p> Hello! I'm <span class="highlight">Ashton Wayne A. Victoria</span>, a college student currently taking a bachelor's degree in Computer Science. I am an aspiring programmer with a passion for technology.</p>
+            
+            <h2><span class="icon">🚀</span> My Goals</h2>
+            <p> Driven to create innovative and engaging digital experiences. I aim to become a <span class="highlight">prominent programmer</span> and make a meaningful impact in the world of technology.</p>
+            
+            <h2><span class="icon">🎮</span> Interests</h2>
+            <p> With a love for gaming and movies, I'm always inspired to develop applications that bring interactive and immersive experiences to life.</p>
+        </div>
+    </div>
+</body>
+</html>
